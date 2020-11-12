@@ -1,2 +1,2 @@
 # Domain Adaptation
-![Demo Animation](../Methodology.jpg)
+![Image](Methodology.jpg)
