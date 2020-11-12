@@ -22,7 +22,9 @@ This implementation is an adaptation of the [CycleGAN Pytorch](https://github.co
 # Train and Test
 Execute, python Main_Script_Executor.py.
 
-Main_Script_Executor.py calls the main train and test functions for remote sensing applications. Additionally, shows the principal hyperparameters for such kind of field. As in the CycleGAN framework, during the training, several intermediate models will be saved in the checkpoint folder as well as generated images for each generator. Once the training has been completed, the translated images will be generated automatically in the folder results.  
+Main_Script_Executor.py calls the main train and test functions for remote sensing applications. Additionally, shows the principal hyperparameters for such kind of field. As in the CycleGAN framework, during the training, several intermediate models will be saved in the checkpoint folder as well as generated images for each generator. Once the training has been completed, the translated images will be generated automatically in the folder results. 
+
+![Image](Example_AM-RO_to_CE-MA.jpg)
 
 # References
 
