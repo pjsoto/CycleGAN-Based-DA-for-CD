@@ -2,7 +2,7 @@
 
 The current project contains the scripts to perform a Domain Adaptation based on CycleGAN technique for change detection in remote sensing data, specifically for deforestation detection in two Brazilian biomes, the Amazon rainforest(Brazilian Legal Amazon) and Brazilian savannah (Cerrado).
 
-The following figure shows overall architecture of the proposed methodology. As in CycleGAN framework, the model contains two mapping functions G:X->Y and F:Y->X as well as the associated discriminators Dx and Dy. Dx encourages the generator F to translate Y into outcomes indistinguishable of X, and vice versa for Dy and Y. To further regularizes the translation procedure, we introduced two difference losses which aim at preserving the changes between the images of both domains in their respective translated versions. Although not represented, the model also uses the already known cycle consistency loss and the identity loss defined in [1].
+The following figure shows the overall architecture of the proposed methodology. As in the CycleGAN framework, the model contains two mapping functions G:X->Y and F:Y->X as well as the associated discriminators Dx and Dy. Dx encourages the generator F to translate Y into outcomes indistinguishable from X, and vice versa for Dy and Y. To further regularizes the translation procedure, we introduced two difference losses that aim at preserving the changes between the images of both domains in their respective translated versions. Although not represented, the model also uses the already known cycle consistency loss and the identity loss defined in [1].
 
 ![Image](Methodology.jpg)
 
@@ -17,11 +17,12 @@ The following figure shows overall architecture of the proposed methodology. As 
 
 # The framework
 
-This implementation is an adaptation of the [CycleGAN Pytorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) for remote sensing data(Landsat 8 OLI). The main noveltie in this release is the introduction of a new constraint into the model's cost function to alleviate the artifacts generation as well as the adaptation to work with remote sensing images of different dimensions.
+This implementation is an adaptation of the [CycleGAN Pytorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) for remote sensing data(Landsat 8 OLI). The main novelty in this release is the introduction of a new constraint into the model's cost function to alleviate the artifacts generation as well as the adaptation to work with remote sensing images of different dimensions.
 
 # Train and Test
+Execute, python Main_Script_Executor.py.
 
-python 
+Main_Script_Executor.py calls the main train and test functions for remote sensing applications. Additionally, shows the principal hyperparameters for such kind of field. As in the CycleGAN framework, during the training, several intermediate models will be saved in the checkpoint folder as well as generated images for each generator. Once the training has been completed, the translated images will be generated automatically in the folder results.  
 
 # References
 
